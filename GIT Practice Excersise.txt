@@ -1,0 +1,37 @@
+Git commands Demo
+
+
+1) git add . > git add . adds / stages all of the files in the current directory.
+
+2) git status  > to check the status of the changes done in local
+
+3) git stash save -u "stashing messages" - Use git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory.
+
+4) After changing the branch git checkout branch-name then
+git pull -r origin staging
+ > If the current branch and the remote have diverged, the user needs to specify how to reconcile the divergent branches with --rebase or --no-rebase (or the corresponding configuration option in pull.rebase).
+
+
+5) git stash list -> The modifications stashed away by this command can be listed with
+
+
+6) git stash apply  > restored (potentially on top of a different commit) with git stash apply
+
+    (The latest stash you created is stored in refs/stash; older stashes are found in the reflog of this reference and can be named using the usual reflog syntax (e.g. stash@{0} is the most recently created stash, stash@{1} is the one before it, stash@{2.hours.ago} is also possible). Stashes may also be referenced by specifying just the stash index (e.g. the integer n is equivalent to stash@{n}).
+
+
+7) git add . > If there any new changes
+
+
+8) git commit -m "Commit message" -> only single commit should be done for each PR if at all create a new branch or use this command
+git commit --amend
+for minor changes and make it in a single commit.
+
+9) git push origin HEAD -f   >  To push the changes to the HEAD
+
+-f: Usually, the command refuses to update a remote ref that is not an ancestor of the local ref used to overwrite it. Also, when the --force-with-lease option is used, the command refuses to update a remote ref whose current value does not match what is expected.
+
+
+10 ) git checkout -b new_branch_name
+
+12)  git checkout -b <new_branch_name> --track origin/staging (Track to staging)
